@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .child-box {
+            height: 100px;
+            display: inline-block;
+            width: 100px;
+            box-sizing: border-box;
+        }
+        #blue {
+            background-color: blue;
+        }
+        
+        #red {
+            background-color: red;
+        }
+
+        #green{
+            background-color: green;
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+
+        #main-box {
+            height:200px;
+            width:400px;
+            margin:50px 0 0 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            transition-duration: 2s;
+            transition-property: transform;
+            transition-timing-function: steps(6,end);
+        }
+        #main-box:hover{
+            display:inline-block;
+            transform: scale(0.5);
+        }
+        body{
+            background-color:#94c2ef;
+            
+        }
+        
+        p{
+            color:#c02405 ;
+        }
+        #trans1 {
+            border-style: solid;
+            border-width: 1px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: #c02405;
+            margin:-200px 0 0 500px;
+            transition: width 2s, height 2s, background-color 2s, transform 2s;
+            rotate: 180deg;
+        }
+
+        #trans1:hover{
+            display:block;
+            background-color: #ffcccc;
+            width: 200px;
+            height: 200px;
+            rotate: 0deg;
+            
+        }
+        #div-box {    
+height: 100px;
+  width: 100px;
+  margin:-100px 0 0 900px;
+  background: rgb(213, 9, 227);
+  opacity: 100%;
+  transition: width 2s, height 2s, transform 1s ; 
+  
+  
+}
+
+#div-box:hover {  
+    height: 300px;  
+  width: 300px;
+  opacity: 50%;
+  border-radius: 50%;
+  transform: rotate(180deg) ;  
+}
+        
+        </style>
+    </head>
+    
+    <body>
+        <div id="main-box">
+            <div id="blue" class="child-box"></div>
+            <div id="red" class="child-box"></div><br>
+            <div id="green" class="child-box"></div>
+            <div id="yellow" class="child-box"></div>
+        </div>
+        
+        <div id="trans1">            
+            <center><p>I am hidden!!</p></center>
+        </div>
+        <div id="div-box"></div>
+        
+    </body>
+</html>
